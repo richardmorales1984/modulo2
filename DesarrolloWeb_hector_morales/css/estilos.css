@@ -1,0 +1,137 @@
+/*Estilos generales*/
+*{margin:0;}
+
+/*Contenedor*/
+.contenedor {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+/*Columnas*/
+.c0, .c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .sc31, .sc32, .sc33, .sc34, .sc35, .sc36 {width: 100%;}
+.c0, .c1{background-color: #5b7989;}
+.c2{background-color: #82c3a6;}
+.c3, .sc31, .sc32, .sc33, .sc34, .sc35, .sc36{background-color: #d5c75f;}
+.c4{background-color: #d5c75f;}
+.c5, .c6, .c7, .c8{background-color: #C6d5c5;}
+
+/*Media para desktop*/
+@media (min-width: 900px) {
+  .contenedor {width: 900px; margin: 0 auto;}  
+}
+
+/*Media para movil*/
+@media (min-width: 600px) {
+  .c0 {width: 70%;}
+  .c1 {width: 30%;}
+  .c2 {width: 100%;}
+  .c3, .c4 {width: 50%;}  
+  .c5, .c6, .c7, .c8 {width: 23%;}
+  .sc31, .sc32, .sc33, .sc34, .sc35, .sc36{width:33.333333333333333333333%;}
+  
+  .c0 header h1{text-align: left;}
+  
+}
+
+/*Cuerpo de pagina*/
+body{
+	background-color: #02010a;
+	color: #000;
+	font-size: 16px;
+	font-family: 'Dancing Script', cursive;
+}
+
+/*header*/
+.c1 nav p{font-size: 20px; margin-top: 10px; text-align: center;}
+.c1 nav p a.sel{margin-left: 8px; text-decoration: underline;}
+
+header h1{
+	margin-left: 10px;
+	text-align: center;
+	text-shadow: 2px #02010a;
+	height: 60px;
+	color: #FFF;
+}
+
+/*Barra de navegacion*/
+nav p a{color: #FFF; text-decoration: none;}
+
+/*Imagenes*/
+figure{padding: 10px; text-align: center;}
+
+img{width: 80%;
+	height: auto; 
+	border: 2px solid #02010a; 
+	display: block; 
+	margin: 0 auto;
+}
+
+.c2 img{		
+	border: 1px solid #000;
+	width: 80%;
+	height: auto;
+	transition: 1s;
+}
+
+figcaption{text-decoration: underline;}
+
+/*Rotar imagen 2*/
+#imagen2 img{transition: 1s;}
+#imagen2 img:hover{transform: rotate(10deg); box-shadow: #82c3a6; border: 2px solid}
+
+/*Efecto imagen 3*/
+.c3 img{border: 1px solid #000;}
+	
+@keyframes imagen3-animacion {
+	0%{position: relative; left: 0px}
+	50% {position: relative; left: 20px; top: -5px}
+	100% {position: relative;left: 0px;}
+}
+
+#imagen3 img:hover{
+	animation-name: imagen3-animacion;
+	animation-duration: 1s;
+	animation-delay: 1s;
+	box-shadow: #82c3a6; border: 2px solid;
+}
+
+/*Efecto sliden*/
+.contenedor{
+  animation-name: encabezado;
+  animation-duration: 1s;
+}
+
+/* Safari 4.0 - 8.0 */
+@keyframes encabezado {
+  0%   {margin-top: 150%;}
+  60%  {margin-top: -5%;}
+  100% {margin-top: 0%;}
+}
+
+
+/*Efecto imagen sc31*/
+.sc31 figure img{
+	filter: blur(10px);
+}
+
+.sc33 figure img{
+	filter: sepia(90%);
+}
+
+.sc32, .sc34, .sc36 figure img{
+	filter: grayscale(100%);
+}
+
+/*footer*/
+footer{	
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px; 
+	background-color: #C6d5c5;
+}
+
+.c5, .c6, .c7, .c8{font-size: 16px; padding: 20px 9px;}
+.c5 ul, .c7 ul{list-style-type: none;}
+.c7 ul li:nth-child(1){list-style-image: url(../img/i1.ico);}
+.c7 ul li:nth-child(2){list-style-image: url(../img/i2.ico);}
+.c7 ul li:nth-child(3){list-style-image: url(../img/i3.ico);}
+
